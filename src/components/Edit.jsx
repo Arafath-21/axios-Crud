@@ -30,6 +30,10 @@ function Edit() {
 
   const handleSubmit = async () => {
     try {
+      if (!name || !email || !username) {
+        alert('Please fill in all required fields.');
+        return;
+      }
       const updatedBlog = {
         name,
         username,
